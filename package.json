@@ -1,0 +1,31 @@
+{
+	"name": "aframe-grid-helper",
+	"version": "1.0.1",
+	"description": "A wrapper for THREE.GridHelper.",
+	"keywords": [
+		"aframe",
+		"component",
+		"three"
+	],
+	"license": "MIT",
+	"author": "Sergej Sintschilin <seregpie@gmail.com>",
+	"files": [],
+	"main": "index.js",
+	"repository": "github:SeregPie/aframe-grid-helper",
+	"scripts": {
+		"build": "rollup -c",
+		"prepublishOnly": "npm run build"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.11.6",
+		"@babel/preset-env": "^7.11.5",
+		"@rollup/plugin-babel": "^5.2.1",
+		"eslint": "^7.10.0",
+		"eslint-config-seregpie": "^1.0.1",
+		"rollup": "^2.29.0",
+		"rollup-plugin-terser": "^7.0.2"
+	},
+	"peerDependencies": {
+		"aframe": ">=0.8"
+	}
+}
