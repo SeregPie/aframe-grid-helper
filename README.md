@@ -26,7 +26,7 @@ import AFRAME from 'aframe';
 
 ## properties
 
-| property | type | default |
+| name | type | default |
 | ---: | :--- | :--- |
 | `colorCenterLine` | `'color'` | `'#444'` |
 | `colorGrid` | `'color'` | `'#888'` |
