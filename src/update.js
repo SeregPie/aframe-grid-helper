@@ -1,3 +1,5 @@
+import AFRAME from 'aframe';
+
 import init from './init';
 import name from './name';
 import remove from './remove';
@@ -12,15 +14,30 @@ export default function(oldData) {
 		opacity,
 		transparent,
 	} = data;
-	let object = el.getObject3D(name);
 	if (Object.keys(oldData).length) {
-		remove.call(this);
-		init.call(this);
+		let pick = (({
+			colorCenterLine,
+			colorGrid,
+			divisions,
+			size,
+		}) => ({
+			colorCenterLine,
+			colorGrid,
+			divisions,
+			size,
+		}));
+		if (!AFRAME.utils.deepEqual(pick(data), pick(oldData))) {
+			remove.call(this);
+			init.call(this);
+		}
 	}
-	let {material} = object;
-	Object.assign(material, {
-		fog,
-		opacity,
-		transparent,
-	});
+	let object = el.getObject3D(name);
+	if (object) {
+		let {material} = object;
+		Object.assign(material, {
+			fog,
+			opacity,
+			transparent,
+		});
+	}
 }

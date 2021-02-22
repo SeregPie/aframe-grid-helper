@@ -8,10 +8,10 @@ export default function() {
 		el,
 	} = this;
 	let {
-		size,
-		divisions,
 		colorCenterLine,
 		colorGrid,
+		divisions,
+		size,
 	} = data;
 	let object = new GridHelper(
 		size,
